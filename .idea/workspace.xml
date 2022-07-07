@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4d8ce4b-7475-49fa-97ce-9e7540c74324" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.0c9b9f73.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/css/main.0c9b9f73.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.0c9b9f73.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/css/main.0c9b9f73.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e92833e8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e92833e8.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e92833e8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppToDo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppToDo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/remove-task (1).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/remove-task (1).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/remove-task (2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/remove-task (2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/remove-task-sprites.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/remove-task-sprites.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-    </list>
+    <list default="true" id="c4d8ce4b-7475-49fa-97ce-9e7540c74324" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -278,7 +264,7 @@
       <workItem from="1657105370068" duration="5371000" />
       <workItem from="1657149790825" duration="3131000" />
       <workItem from="1657183906107" duration="16256000" />
-      <workItem from="1657227048289" duration="2684000" />
+      <workItem from="1657227048289" duration="2859000" />
     </task>
     <task id="LOCAL-00001" summary="Some changes in code and css">
       <created>1657203103478</created>
@@ -294,11 +280,18 @@
       <option name="project" value="LOCAL" />
       <updated>1657203855715</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed in code: added correct ID">
+      <created>1657229806276</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657229806277</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122000000" />
+    <option name="totallyTimeSpent" value="122175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="124" y="63" width="1392" height="746" extended-state="0" />
@@ -352,7 +345,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Some changes in code and css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some changes in code and css" />
+    <MESSAGE value="Fixed in code: added correct ID" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed in code: added correct ID" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/index.js">
