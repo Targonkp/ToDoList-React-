@@ -112,14 +112,14 @@
 }
 
 .task-remove{
-    background: url("images/remove-task-sprites.png") no-repeat;
+    background: url("../public/images/remove-task-sprites.png") no-repeat;
     background-size: 80px auto;
     width: 40px;
     height: 40px;
 }
 
 .task-remove:hover{
-    background: url("images/remove-task-sprites.png") -40px 0 no-repeat;
+    background: url("../public/images/remove-task-sprites.png") -40px 0 no-repeat;
     background-size: 80px auto;
 }
 
