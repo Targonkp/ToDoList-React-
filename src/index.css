@@ -1,8 +1,19 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.root{
+    background: url("../public/images/background-nature.jpg") center center / cover no-repeat;
+    padding: 20px;
+    min-height: 100vh;
+}
+
 .app{
     padding: 10px 20px;
     border-radius:15px;
     border:0;
-    background: #f7f7f7;
+    background: rgb(247, 247, 247, 0.85);
     box-shadow:4px 4px 10px rgba(32, 32, 32, 0.2);
     width: 500px;
     margin: 0 auto;
@@ -36,8 +47,7 @@
     margin: 0;
     font-size: 68px;
     font-weight: 700;
-    background-color: #2AA5A0;
-    background-image: linear-gradient(90deg, #E3535D, #4c8078, #95e836);
+    background-color: #175226;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #172c59;
