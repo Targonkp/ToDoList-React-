@@ -17,7 +17,14 @@ function ToDoForm({addNewTask}) {
     //функция, запускающая добавление задачи в массив ToDoList
     function handleSubmit(event) {
         event.preventDefault()
-        let currentDate = new Date().toDateString()
+        let options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric'
+        }
+        let currentDate = new Date().toLocaleString("ru", options)
         if (inputValue == ''){
             textInput.current.placeholder = 'Вы пытаетесь добавить пустую задачу'
         }
