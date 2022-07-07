@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bb6efc86.css",
+    "main.js": "/static/js/main.b414c174.js",
+    "static/media/remove-task (1).png": "/static/media/remove-task (1).866565edcd42006c9969.png",
+    "index.html": "/index.html",
+    "main.bb6efc86.css.map": "/static/css/main.bb6efc86.css.map",
+    "main.b414c174.js.map": "/static/js/main.b414c174.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb6efc86.css",
+    "static/js/main.b414c174.js"
+  ]
+}
