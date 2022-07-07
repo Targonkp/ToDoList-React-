@@ -9,11 +9,13 @@ import Time from "./components/Time";
 
 function AppToDo() {
     //состояние списка задач
-    const [toDoList, setToDoList] = useState(tasks);
+    const [toDoList, setToDoList] = useState(tasks)
+    //получаю id последнего элемента в списке, чтобы избежать дублирования в дальнейшем
+    let lastElement = toDoList.length-1
 
     //создаю функцию, которая будет добавлять новую задачу в list - для этого передаю ее в виде пропса в ToDoForm
     function addNewTask(inputValue, currentDate) {
-        let newList = [...toDoList, {id: toDoList.length + 1, description: inputValue, complete: false, date: currentDate}]
+        let newList = [...toDoList, {id: toDoList[lastElement].id + 1, description: inputValue, complete: false, date: currentDate}]
         setToDoList(newList)
     }
 
