@@ -10,6 +10,8 @@ import Time from "./components/Time";
 function AppToDo() {
     //состояние списка задач
     const [toDoList, setToDoList] = useState(tasks)
+    //состояние флага у часов
+    const [flag, setFlag] = useState(true)
     //получаю id последнего элемента в списке, чтобы избежать дублирования в дальнейшем
     let lastElement
     lastElement = toDoList.length-1
@@ -47,13 +49,27 @@ function AppToDo() {
         }
     }
 
+    //Функция, которая закрывает таймер при клике на close
+    function closeTimer() {
+         let closeTimer = !flag
+         setFlag(closeTimer)
+    }
+
     return(
+         <>
         <div className="app">
             <Header/>
             <ToDoForm addNewTask={addNewTask}/>
-            <ToDoList toDoList={toDoList} clickedTask={clickedTask} taskRemove={taskRemove}/>
-            <Time/>
+            {
+                toDoList.length !== 0
+                ?<ToDoList toDoList={toDoList} clickedTask={clickedTask} taskRemove={taskRemove}/>
+                : <div className='empty-todolist'>В списке задач пусто</div>
+            }
         </div>
+        <div className={flag === true ? "timer-container" : "timer-container timer-container_disabled"}>
+        <Time closeTimer={closeTimer} />
+        </div>
+        </>
     )
 }
 

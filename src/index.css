@@ -7,6 +7,7 @@ body{
     background: url("../public/images/background-nature.jpg") center center / cover no-repeat;
     padding: 20px;
     min-height: 100vh;
+    position: relative;
 }
 
 .app{
@@ -21,6 +22,7 @@ body{
 
 .timer-wrap{
     text-align: center;
+    position: relative;
 }
 
 .timer{
@@ -32,6 +34,62 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px #172c59;
+}
+
+.timer-close{
+    position: absolute;
+    top: -2px;
+    right: -22px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.timer-close:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.timer-open{
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    background: transparent;
+    visibility: hidden;
+}
+
+.timer-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    padding: 5px 25px 5px 10px;
+    border: 1px solid #da8d1d;
+    background: rgba(227, 227, 227, 0.75);
+    opacity: 1;
+    transition: 1.2s;
+}
+
+.timer-container.timer-container_disabled{
+    transition: 1.4s;
+    left: -290px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: rgba(227, 172, 186, 0.75);
+}
+
+
+.timer-container.timer-container_disabled .timer-wrap{
+    opacity: 0;
+}
+
+.timer-container.timer-container_disabled .timer-open{
+    visibility: visible;
 }
 
 .header-wrap{
@@ -178,4 +236,13 @@ body{
 .form-add-task__button:focus{
     border: 2px solid #cfa568;
     box-shadow: 0 0 5px #397ac0;
+}
+
+.empty-todolist{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 20px 10px;
+    border-top: 1px solid #848484;
+    border-bottom: 1px solid #848484;
 }
