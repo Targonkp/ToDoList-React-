@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import Header from "./components/Header"
 import tasks from "./dataTasks"
 import ToDoList from "./components/ToDoList"
 import ToDo from "./components/ToDo"
 import ToDoForm from "./components/ToDoForm";
 import Time from "./components/Time";
+import MainForm from "./components/MainForm";
 
 
 function AppToDo() {
@@ -12,9 +13,13 @@ function AppToDo() {
     const [toDoList, setToDoList] = useState(tasks)
     //состояние флага у часов
     const [flag, setFlag] = useState(true)
+    //состояние авторизации
+    const [authorization, setAuthorization] = useState(false)
     //получаю id последнего элемента в списке, чтобы избежать дублирования в дальнейшем
     let lastElement
     lastElement = toDoList.length-1
+    const appWrap = useRef()
+
 
     //создаю функцию, которая будет добавлять новую задачу в list - для этого передаю ее в виде пропса в ToDoForm
     function addNewTask(inputValue, currentDate) {
@@ -55,21 +60,50 @@ function AppToDo() {
          setFlag(closeTimer)
     }
 
+    //функция, сравнивающая логин и пароль из формы с правильными значениями
+    function submitValue(loginForm, passwordForm) {
+        console.log(loginForm, passwordForm)
+        if (loginForm === 'Admin' && passwordForm === '123') {
+            appWrap.current.classList.add('_preloader')
+            setTimeout(() => {
+                    setAuthorization(true)
+                }, 1500
+            )
+            setTimeout(
+                () => {
+                    appWrap.current.classList.remove('_preloader')
+                }, 1400
+            )
+        }
+        else
+        {
+            alert('Вы ввели неправильный логин и (или) пароль')
+        }
+
+    }
+
     return(
-         <>
-        <div className="app">
-            <Header/>
-            <ToDoForm addNewTask={addNewTask}/>
-            {
-                toDoList.length !== 0
-                ?<ToDoList toDoList={toDoList} clickedTask={clickedTask} taskRemove={taskRemove}/>
-                : <div className='empty-todolist'>В списке задач пусто</div>
-            }
+        <div className='app-wrap' ref={appWrap}>{
+            authorization === false
+            ?  <MainForm submitValue={submitValue}/>
+            :
+                <>
+                    <div className="app">
+                        <Header/>
+                        <ToDoForm addNewTask={addNewTask}/>
+                        {
+                            toDoList.length !== 0
+                                ?<ToDoList toDoList={toDoList} clickedTask={clickedTask} taskRemove={taskRemove}/>
+                                : <div className='empty-todolist'>В списке задач пусто</div>
+                        }
+                    </div>
+                    <div className={flag === true ? "timer-container" : "timer-container timer-container_disabled"}>
+                        <Time closeTimer={closeTimer} />
+                    </div>
+                    </>
+
+          }
         </div>
-        <div className={flag === true ? "timer-container" : "timer-container timer-container_disabled"}>
-        <Time closeTimer={closeTimer} />
-        </div>
-        </>
     )
 }
 
