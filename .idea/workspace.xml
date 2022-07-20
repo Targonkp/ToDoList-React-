@@ -6,11 +6,12 @@
       <change afterPath="$PROJECT_DIR$/src/components/SearchInput/SearchInput.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/SearchInput/search-input-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.c5065681.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.c5065681.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.c5065681.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.78af497f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.78af497f.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.78af497f.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppToDo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppToDo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Time.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Time.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToDoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoForm.jsx" afterDir="false" />
@@ -28,14 +29,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AppToDo.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppToDo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppToDo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="52" column="39" lean-forward="true" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+            <state relative-caret-position="170">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-                <marker date="1658351024628" expanded="true" signature="763:1130" ph="..." />
+                <marker date="1658352265066" expanded="true" signature="763:1083" ph="..." />
               </folding>
             </state>
           </provider>
@@ -54,12 +55,12 @@
         <entry file="file://$PROJECT_DIR$/build/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="92" selection-start-column="92" selection-end-column="92" />
+              <caret column="335" selection-start-column="335" selection-end-column="335" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.265eb068.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.265eb068.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build/static/css/main.265eb068.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -106,17 +107,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToDo.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ToDo.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="102">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -198,8 +190,8 @@
         <option value="$PROJECT_DIR$/src/components/SearchInput/search-input-style.css" />
         <option value="$PROJECT_DIR$/src/components/SearchInput/SearchInput.jsx" />
         <option value="$PROJECT_DIR$/src/index.css" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/AppToDo.js" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/build/static/css/main.265eb068.css" />
       </list>
@@ -220,8 +212,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="106" />
-    <option name="y" value="60" />
+    <option name="x" value="-13" />
+    <option name="y" value="100" />
     <option name="width" value="1392" />
     <option name="height" value="746" />
   </component>
@@ -248,6 +240,12 @@
               <item name="react-project-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-project-app" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-project-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-project-app" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -263,6 +261,13 @@
               <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-project-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-project-app" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-project-app" type="b2602c69:ProjectViewProjectNode" />
@@ -348,7 +353,7 @@
       <workItem from="1657622503328" duration="1225000" />
       <workItem from="1658233545696" duration="3733000" />
       <workItem from="1658262047776" duration="3455000" />
-      <workItem from="1658346146153" duration="4839000" />
+      <workItem from="1658346146153" duration="5948000" />
     </task>
     <task id="LOCAL-00001" summary="Some changes in code and css">
       <created>1657203103478</created>
@@ -413,14 +418,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658350455817</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Some changes">
+      <created>1658351329340</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658351329340</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162350000" />
+    <option name="totallyTimeSpent" value="163459000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="106" y="60" width="1392" height="746" extended-state="0" />
+    <frame x="-13" y="100" width="1392" height="746" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24519941" />
@@ -486,12 +498,10 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
+      <option name="time" value="1" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/react/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/index.jsx" />
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -666,13 +676,6 @@
     <entry file="file://$PROJECT_DIR$/build/static/media/background-nature.1db6753187bb7201afcc.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/static/js/main.dadb8500.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -690,28 +693,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/static/css/main.265eb068.css">
+    <entry file="file://$PROJECT_DIR$/build/static/js/main.78af497f.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="44" lean-forward="true" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        <state relative-caret-position="187">
+          <caret line="1" column="1371" selection-start-line="1" selection-start-column="1371" selection-end-line="1" selection-end-column="1371" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppToDo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1658352265066" expanded="true" signature="763:1083" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="92" selection-start-column="92" selection-end-column="92" />
+          <caret column="335" selection-start-column="335" selection-end-column="335" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppToDo.js">
+    <entry file="file://$PROJECT_DIR$/build/static/css/main.265eb068.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="52" column="39" lean-forward="true" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1658351024628" expanded="true" signature="763:1130" ph="..." />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="44" lean-forward="true" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
         </state>
       </provider>
     </entry>

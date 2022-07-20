@@ -22,26 +22,24 @@ function AppToDo() {
     //для поиска - передаю callback и массив зависимостей, полученный результат передаю в список постов
     const searchedPosts = useMemo(() => {
         let newToDoList = toDoList
-        if (authorization === true){
         return newToDoList.filter(post => post.description.toLowerCase().includes(searchQuery.toLowerCase()))
-        }
     }, [searchQuery, toDoList])
-
-    //при извлечении декодирую обратно в объект
-    useEffect(() => {
-        setToDoList(JSON.parse(localStorage.getItem('toDoList')))
-    }, [])
-
-    //передаю объект в localStorage, предварительно закодировав его в строку JSON
-    useEffect(() => {
-        localStorage.setItem('toDoList', JSON.stringify(toDoList))
-    }, [toDoList])
 
 
     //получаю id последнего элемента в списке, чтобы избежать дублирования в дальнейшем
     let lastElement
     lastElement = toDoList.length-1
     const appWrap = useRef()
+
+    // //при извлечении декодирую обратно в объект
+    // useEffect(() => {
+    //     setToDoList(JSON.parse(localStorage.getItem('toDoList')))
+    // }, [])
+    //
+    // //передаю объект в localStorage, предварительно закодировав его в строку JSON
+    // useEffect(() => {
+    //     localStorage.setItem('toDoList', JSON.stringify(toDoList))
+    // }, [toDoList])
 
     //создаю функцию, которая будет добавлять новую задачу в list - для этого передаю ее в виде пропса в ToDoForm
     function addNewTask(inputValue, currentDate) {
