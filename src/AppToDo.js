@@ -82,7 +82,6 @@ function AppToDo() {
 
     //функция, сравнивающая логин и пароль из формы с правильными значениями
     function submitValue(loginForm, passwordForm) {
-        console.log(loginForm, passwordForm)
         if (loginForm === 'Admin' && passwordForm === '123') {
             appWrap.current.classList.add('_preloader')
             setTimeout(() => {
@@ -105,7 +104,6 @@ function AppToDo() {
     //получаю значение value из поиска и обновляю состояние setSearchQuery
     function searchInputValue(event) {
         setSearchQuery(event.target.value)
-        console.log(searchQuery)
     }
 
     return(
