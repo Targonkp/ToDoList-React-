@@ -216,7 +216,7 @@ body{
     background-size: 80px auto;
 }
 
-.form-add-task{
+.form{
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -226,7 +226,7 @@ body{
     border-bottom-right-radius: 10px;
     color: #679bb7;
     font-size: 24px;
-    box-shadow: 0 10px 20px -5px rgba(0,0,0, .2);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.55);
 }
 
 .form-add-task__input{

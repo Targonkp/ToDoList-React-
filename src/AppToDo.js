@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useMemo, useEffect} from 'react'
 import Header from "./components/Header"
 import tasks from "./dataTasks"
 import ToDoList from "./components/ToDoList"
@@ -6,6 +6,7 @@ import ToDo from "./components/ToDo"
 import ToDoForm from "./components/ToDoForm";
 import Time from "./components/Time";
 import MainForm from "./components/MainForm";
+import SearchInput from "./components/SearchInput/SearchInput";
 
 
 function AppToDo() {
@@ -15,11 +16,30 @@ function AppToDo() {
     const [flag, setFlag] = useState(true)
     //состояние авторизации
     const [authorization, setAuthorization] = useState(false)
+    //состояние поиска
+    const [searchQuery, setSearchQuery] = useState('')
+
+    //для поиска - передаю callback и массив зависимостей, полученный результат передаю в список постов
+    const searchedPosts = useMemo(() => {
+        let newToDoList = toDoList
+        return newToDoList.filter(post => post.description.toLowerCase().includes(searchQuery.toLowerCase()))
+    }, [searchQuery, toDoList])
+
+    //при извлечении декодирую обратно в объект
+    useEffect(() => {
+        setToDoList(JSON.parse(localStorage.getItem('toDoList')))
+    }, [])
+
+    //передаю объект в localStorage, предварительно закодировав его в строку JSON
+    useEffect(() => {
+        localStorage.setItem('toDoList', JSON.stringify(toDoList))
+    }, [toDoList])
+
+
     //получаю id последнего элемента в списке, чтобы избежать дублирования в дальнейшем
     let lastElement
     lastElement = toDoList.length-1
     const appWrap = useRef()
-
 
     //создаю функцию, которая будет добавлять новую задачу в list - для этого передаю ее в виде пропса в ToDoForm
     function addNewTask(inputValue, currentDate) {
@@ -82,6 +102,12 @@ function AppToDo() {
 
     }
 
+    //получаю значение value из поиска и обновляю состояние setSearchQuery
+    function searchInputValue(event) {
+        setSearchQuery(event.target.value)
+        console.log(searchQuery)
+    }
+
     return(
         <div className='app-wrap' ref={appWrap}>{
             authorization === false
@@ -91,9 +117,10 @@ function AppToDo() {
                     <div className="app">
                         <Header/>
                         <ToDoForm addNewTask={addNewTask}/>
+                        <SearchInput searchInputValue={searchInputValue}/>
                         {
                             toDoList.length !== 0
-                                ?<ToDoList toDoList={toDoList} clickedTask={clickedTask} taskRemove={taskRemove}/>
+                                ?<ToDoList toDoList={searchedPosts} clickedTask={clickedTask} taskRemove={taskRemove}/>
                                 : <div className='empty-todolist'>В списке задач пусто</div>
                         }
                     </div>
