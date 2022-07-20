@@ -22,7 +22,9 @@ function AppToDo() {
     //для поиска - передаю callback и массив зависимостей, полученный результат передаю в список постов
     const searchedPosts = useMemo(() => {
         let newToDoList = toDoList
+        if (authorization === true){
         return newToDoList.filter(post => post.description.toLowerCase().includes(searchQuery.toLowerCase()))
+        }
     }, [searchQuery, toDoList])
 
     //при извлечении декодирую обратно в объект

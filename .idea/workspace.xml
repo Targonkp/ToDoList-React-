@@ -6,13 +6,11 @@
       <change afterPath="$PROJECT_DIR$/src/components/SearchInput/SearchInput.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/SearchInput/search-input-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.265eb068.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/css/main.265eb068.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.99ffbd6f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.99ffbd6f.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.99ffbd6f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.c5065681.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.c5065681.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.c5065681.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppToDo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppToDo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Time.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Time.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToDoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoForm.jsx" afterDir="false" />
@@ -30,14 +28,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AppToDo.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AppToDo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppToDo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="218">
+              <caret line="52" column="39" lean-forward="true" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-                <marker date="1658350146406" expanded="true" signature="763:1083" ph="..." />
+                <marker date="1658351024628" expanded="true" signature="763:1130" ph="..." />
               </folding>
             </state>
           </provider>
@@ -56,12 +54,12 @@
         <entry file="file://$PROJECT_DIR$/build/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="337" selection-start-column="337" selection-end-column="337" />
+              <caret column="92" selection-start-column="92" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.265eb068.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.265eb068.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/static/css/main.265eb068.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -127,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>toDoList</find>
       <find>setToDoList</find>
       <find>task-icon-remove</find>
       <find>task-remove</find>
@@ -156,6 +153,7 @@
       <find>consol</find>
       <find>url</find>
       <find>console.log</find>
+      <find>filter</find>
       <find>/static</find>
     </findStrings>
   </component>
@@ -262,6 +260,13 @@
             <path>
               <item name="react-project-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-project-app" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-project-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-project-app" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -343,7 +348,7 @@
       <workItem from="1657622503328" duration="1225000" />
       <workItem from="1658233545696" duration="3733000" />
       <workItem from="1658262047776" duration="3455000" />
-      <workItem from="1658346146153" duration="3872000" />
+      <workItem from="1658346146153" duration="4839000" />
     </task>
     <task id="LOCAL-00001" summary="Some changes in code and css">
       <created>1657203103478</created>
@@ -401,11 +406,18 @@
       <option name="project" value="LOCAL" />
       <updated>1658349546983</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Some changes">
+      <created>1658350455817</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658350455817</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161383000" />
+    <option name="totallyTimeSpent" value="162350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="106" y="60" width="1392" height="746" extended-state="0" />
@@ -464,7 +476,8 @@
     <MESSAGE value="Timer (close-open) added" />
     <MESSAGE value="Imitation of authorization added" />
     <MESSAGE value="LocalStorage and Search added" />
-    <option name="LAST_COMMIT_MESSAGE" value="LocalStorage and Search added" />
+    <MESSAGE value="Some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -670,17 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppToDo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-            <marker date="1658350146406" expanded="true" signature="763:1083" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -688,17 +690,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="337" selection-start-column="337" selection-end-column="337" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/static/css/main.265eb068.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="44" lean-forward="true" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="92" selection-start-column="92" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppToDo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="52" column="39" lean-forward="true" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1658351024628" expanded="true" signature="763:1130" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
