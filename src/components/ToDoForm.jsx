@@ -39,7 +39,7 @@ function ToDoForm({addNewTask}) {
 
     return(
         <div>
-            <form action="" className='form-add-task'>
+            <form action="" className='form form-add-task'>
                 <input ref={textInput} type="text" value={inputValue} onChange={handleChange} className='form-add-task__input' placeholder='Введите задачу'/>
                 <input type="submit" value='Добавить задачу' className='form-add-task__button' onClick={handleSubmit}/>
             </form>

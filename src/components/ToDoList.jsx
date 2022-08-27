@@ -12,7 +12,7 @@ function ToDoList ({toDoList, clickedTask, taskRemove}) {
                 toDoList.map(
                 todo => {
                     return(
-                        <ToDo todo={todo} taskRemove={taskRemove} key={keyId++}/>
+                        <ToDo todo={todo} taskRemove={taskRemove} key={todo.id}/>
                     )
                 }
             )}

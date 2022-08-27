@@ -7,6 +7,7 @@ import ToDoForm from "./components/ToDoForm";
 import Time from "./components/Time";
 import MainForm from "./components/MainForm";
 import SearchInput from "./components/SearchInput/SearchInput";
+import Logout from "./components/Logout";
 
 
 function AppToDo() {
@@ -26,20 +27,31 @@ function AppToDo() {
     }, [searchQuery, toDoList])
 
 
+    //при извлечении декодирую обратно в объект
+    useEffect(() => {
+        setToDoList(JSON.parse(localStorage.getItem('toDoList')))
+    }, [])
+
+    //передаю объект в localStorage, предварительно закодировав его в строку JSON
+    useEffect(() => {
+        localStorage.setItem('toDoList', JSON.stringify(toDoList))
+    }, [toDoList])
+
+    //получаю текущее значение авторизации
+    useEffect(() => {
+        setAuthorization(localStorage.getItem('authorizationKey'))
+    }, [])
+
+    //устанавливаю ключ для сохранения текущего значения авторизации
+    useEffect(() => {
+        localStorage.setItem('authorizationKey', authorization)
+    }, [authorization])
+
+
     //получаю id последнего элемента в списке, чтобы избежать дублирования в дальнейшем
     let lastElement
     lastElement = toDoList.length-1
     const appWrap = useRef()
-
-    // //при извлечении декодирую обратно в объект
-    // useEffect(() => {
-    //     setToDoList(JSON.parse(localStorage.getItem('toDoList')))
-    // }, [])
-    //
-    // //передаю объект в localStorage, предварительно закодировав его в строку JSON
-    // useEffect(() => {
-    //     localStorage.setItem('toDoList', JSON.stringify(toDoList))
-    // }, [toDoList])
 
     //создаю функцию, которая будет добавлять новую задачу в list - для этого передаю ее в виде пропса в ToDoForm
     function addNewTask(inputValue, currentDate) {
@@ -78,6 +90,17 @@ function AppToDo() {
     function closeTimer() {
          let closeTimer = !flag
          setFlag(closeTimer)
+    }
+
+    //функция, которая меняет значение авторизации на false
+    function logoutPage() {
+        appWrap.current.classList.add('_preloader')
+        setTimeout(
+            () => {
+                setAuthorization(false)
+                appWrap.current.classList.remove('_preloader')
+            }, 1400
+        )
     }
 
     //функция, сравнивающая логин и пароль из формы с правильными значениями
@@ -124,6 +147,9 @@ function AppToDo() {
                     </div>
                     <div className={flag === true ? "timer-container" : "timer-container timer-container_disabled"}>
                         <Time closeTimer={closeTimer} />
+                    </div>
+                    <div className="logout-container">
+                        <Logout logoutPage={logoutPage}/>
                     </div>
                     </>
 
