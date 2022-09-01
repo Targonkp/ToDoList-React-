@@ -23,6 +23,7 @@ function MainForm({submitValue}) {
     }
 
     return (
+        <div className='form-container'>
         <div className='form-wrap'>
             <h1>Вход в ToDo List</h1>
             <form action="" className='main-form'>
@@ -30,6 +31,7 @@ function MainForm({submitValue}) {
                 <input type="password" className='main-form__input' id='password' placeholder='Введите пароль...'/>
                 <input type="submit" value='Войти' className='main-form__submit' onClick={getFormValues}/>
             </form>
+        </div>
         </div>
     )
 }

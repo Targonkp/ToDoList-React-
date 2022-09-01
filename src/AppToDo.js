@@ -8,6 +8,7 @@ import Time from "./components/Time";
 import MainForm from "./components/MainForm";
 import SearchInput from "./components/SearchInput/SearchInput";
 import Logout from "./components/Logout";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 
 function AppToDo() {
@@ -30,22 +31,15 @@ function AppToDo() {
     //при извлечении декодирую обратно в объект
     useEffect(() => {
         setToDoList(JSON.parse(localStorage.getItem('toDoList')))
+        setAuthorization(JSON.parse(localStorage.getItem('authorizationKey')))
     }, [])
 
     //передаю объект в localStorage, предварительно закодировав его в строку JSON
     useEffect(() => {
         localStorage.setItem('toDoList', JSON.stringify(toDoList))
-    }, [toDoList])
-
-    //получаю текущее значение авторизации
-    useEffect(() => {
-        setAuthorization(localStorage.getItem('authorizationKey'))
-    }, [])
-
-    //устанавливаю ключ для сохранения текущего значения авторизации
-    useEffect(() => {
-        localStorage.setItem('authorizationKey', authorization)
-    }, [authorization])
+        //localStorage хранит только строку, поэтому для логического типа использую JSON
+        localStorage.setItem('authorizationKey', JSON.stringify(authorization))
+    }, [toDoList, authorization])
 
 
     //получаю id последнего элемента в списке, чтобы избежать дублирования в дальнейшем
@@ -134,8 +128,9 @@ function AppToDo() {
             authorization === false
             ?  <MainForm submitValue={submitValue}/>
             :
-                <>
+                <div className='app-container'>
                     <div className="app">
+                        <ProgressBar/>
                         <Header/>
                         <ToDoForm addNewTask={addNewTask}/>
                         <SearchInput searchInputValue={searchInputValue}/>
@@ -151,7 +146,7 @@ function AppToDo() {
                     <div className="logout-container">
                         <Logout logoutPage={logoutPage}/>
                     </div>
-                    </>
+                    </div>
 
           }
         </div>
