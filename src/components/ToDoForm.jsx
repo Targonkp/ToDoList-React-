@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react'
-import AppToDo from '../AppToDo'
+import AppToDo from './AppToDo'
 
 //создаю форму
 function ToDoForm({addNewTask}) {

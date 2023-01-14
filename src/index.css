@@ -419,3 +419,17 @@ body{
     opacity: 1;
     transform: translateY(10px);
 }
+
+.not-found{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.not-found__text{
+    width: 80%;
+    height: 80%;
+    background: url("../public/images/404-erros.svg") no-repeat center center;
+}

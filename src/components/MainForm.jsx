@@ -1,9 +1,16 @@
-import {useEffect, useRef, useState} from 'react'
+import {useEffect, useRef, useState, useContext} from 'react'
+import {useNavigate} from "react-router-dom";
+import {Context} from "./Context";
 
-function MainForm({submitValue}) {
-    const loginEl = useRef('')
+function MainForm() {
     //состояние для value логина
-    const [login, setLogin] = useState(loginEl.current.value)
+    const [login, setLogin] = useState('')
+    //состояние для value пароля
+    const [password, setPassword] = useState('')
+    //создаю хук для редиректа
+    const navigate = useNavigate()
+    //создаю хук с объектом контекста
+    const {authorization, setAuthorization} = useContext(Context)
 
     //получаю значение по ключу
     useEffect(() => {
@@ -15,11 +22,16 @@ function MainForm({submitValue}) {
         localStorage.setItem('login', login)
     }, [login])
 
+
+    //функция для проверки логина и пароля
     function getFormValues(event) {
         event.preventDefault()
-        let password = event.target.previousElementSibling.value
-        let login = event.target.previousElementSibling.previousElementSibling.value
-        submitValue(login, password)
+        if (login === 'Admin' && password === '123') {
+            setAuthorization(true)
+        }
+        else {
+            alert('Вы ввели неправильный пароль, повторите снова!')
+        }
     }
 
     return (
@@ -27,8 +39,21 @@ function MainForm({submitValue}) {
         <div className='form-wrap'>
             <h1>Вход в ToDo List</h1>
             <form action="" className='main-form'>
-                <input type="text" className='main-form__input' id='login' placeholder='Введите логин...' ref={loginEl}/>
-                <input type="password" className='main-form__input' id='password' placeholder='Введите пароль...'/>
+                <input
+                    type="text"
+                    className='main-form__input'
+                    id='login'
+                    value={login}
+                    onChange={(e) => setLogin(e.target.value)}
+                    placeholder='Введите логин...'
+                />
+                <input
+                    type="password"
+                    className='main-form__input'
+                    id='password'
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder='Введите пароль...'
+                />
                 <input type="submit" value='Войти' className='main-form__submit' onClick={getFormValues}/>
             </form>
         </div>

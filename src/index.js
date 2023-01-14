@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./index.css";
-import AppToDo from "./AppToDo";
+import Layout from "./components/Layout";
 
 
 ReactDOM.render(
-    <AppToDo/>,
+    <Layout/>,
     document.getElementById('root')
 )
 
