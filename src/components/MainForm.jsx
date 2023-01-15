@@ -1,5 +1,4 @@
 import {useEffect, useRef, useState, useContext} from 'react'
-import {useNavigate} from "react-router-dom";
 import {Context} from "./Context";
 
 function MainForm() {
@@ -7,8 +6,6 @@ function MainForm() {
     const [login, setLogin] = useState('')
     //состояние для value пароля
     const [password, setPassword] = useState('')
-    //создаю хук для редиректа
-    const navigate = useNavigate()
     //создаю хук с объектом контекста
     const {authorization, setAuthorization} = useContext(Context)
 

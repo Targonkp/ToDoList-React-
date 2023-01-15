@@ -21,7 +21,7 @@ function AppToDo({submitValue, logoutPage}) {
 
     useEffect(
         () => {
-            authorization ? navigate('/main') : navigate('/auth')
+            authorization ? navigate('/ToDoList-React-/build/main') : navigate('/ToDoList-React-/build/auth')
         }, [authorization]
     )
 
@@ -29,8 +29,8 @@ function AppToDo({submitValue, logoutPage}) {
 
        <>
                 <Routes>
-                    <Route path='/auth' element={<MainForm/>}/>
-                    <Route path='/main' element={<MainContent logoutPage={logoutPage}/>} />
+                    <Route path='/ToDoList-React-/build/auth' element={<MainForm/>}/>
+                    <Route path='/ToDoList-React-/build/main' element={<MainContent logoutPage={logoutPage}/>} />
                 </Routes>
         </>
     )
