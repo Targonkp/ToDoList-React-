@@ -1,5 +1,5 @@
 import React, {useState, useRef, useMemo, useEffect} from 'react'
-import {BrowserRouter, Routes, Route, Link, NavLink, Navigate} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Routes, Route, Link, NavLink, Navigate} from 'react-router-dom'
 import AppToDo from "./AppToDo"
 import {Context} from "./Context"
 
@@ -37,10 +37,10 @@ function Layout() {
     return (
         <Context.Provider value = {{authorization, setAuthorization}}>
         <div className='app-wrap' ref={appWrap}>
-            <BrowserRouter>
+            <HashRouter>
             <AppToDo
                 logoutPage={logoutPage}/>
-            </BrowserRouter>
+            </HashRouter>
         </div>
         </Context.Provider>
       )
