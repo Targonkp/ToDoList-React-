@@ -1,6 +1,5 @@
 import './main-content.css';
 import React, {useState, useRef, useMemo, useEffect, useContext} from 'react'
-import {useNavigate} from "react-router-dom";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import Header from "../Header";
 import ToDoForm from "../ToDoForm";
@@ -19,18 +18,15 @@ function MainContent({logoutPage}){
     const [searchQuery, setSearchQuery] = useState('')
     //состояние флага у часов
     const [flag, setFlag] = useState(true)
-    //создаю хук для редиректа
-    const navigate = useNavigate()
     //создаю хук с объектом контекста
     const {authorization, setAuthorization} = useContext(Context)
+    let newToDoList = toDoList
 
 
     //для поиска - передаю callback и массив зависимостей, полученный результат передаю в список постов
     const searchedPosts = useMemo(() => {
-        let newToDoList = toDoList
-        return newToDoList.filter(post => post.description.toLowerCase().includes(searchQuery.toLowerCase()))
+        return  newToDoList.filter(post => post.description.toLowerCase().includes(searchQuery.toLowerCase()))
     }, [searchQuery, toDoList])
-
 
     //при извлечении декодирую обратно в объект
     useEffect(() => {
@@ -42,14 +38,6 @@ function MainContent({logoutPage}){
         //localStorage хранит только строку, поэтому для логического типа использую JSON
         localStorage.setItem('toDoList', JSON.stringify(toDoList))
     }, [toDoList])
-
-    //для редиректа - если false, то будет редирект на страницу авторизации
-    useEffect(() => {
-        if (!authorization){
-            navigate('/auth')
-        }
-
-    }, [authorization])
 
     //получаю id последнего элемента в списке, чтобы избежать дублирования в дальнейшем
     let lastElement
@@ -98,7 +86,6 @@ function MainContent({logoutPage}){
         let closeTimer = !flag
         setFlag(closeTimer)
     }
-
 
 
     return (
