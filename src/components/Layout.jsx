@@ -1,11 +1,14 @@
 import React, {useState, useRef, useMemo, useEffect} from 'react'
 import {BrowserRouter, HashRouter, Routes, Route, Link, NavLink, Navigate} from 'react-router-dom'
 import AppToDo from "./AppToDo"
+import tasks from "../dataTasks";
 import {Context} from "./Context"
 
 function Layout() {
     //состояние авторизации
     const [authorization, setAuthorization] = useState(false)
+    //состояние списка задач
+    const [toDoList, setToDoList] = useState(tasks)
 
     useEffect(() => {
         setAuthorization(JSON.parse(localStorage.getItem('authorizationKey')))
@@ -35,7 +38,7 @@ function Layout() {
 
 
     return (
-        <Context.Provider value = {{authorization, setAuthorization}}>
+        <Context.Provider value = {{authorization, setAuthorization, toDoList, setToDoList}}>
         <div className='app-wrap' ref={appWrap}>
             <HashRouter>
             <AppToDo

@@ -4,7 +4,6 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import Header from "../Header";
 import ToDoForm from "../ToDoForm";
 import SearchInput from "../SearchInput/SearchInput";
-import tasks from "../../dataTasks";
 import ToDoList from "../ToDoList";
 import Time from "../Time";
 import Logout from "../Logout";
@@ -12,19 +11,17 @@ import Prompt from "../Propmpt/Prompt";
 import {Context} from "../Context";
 
 function MainContent({logoutPage}){
-    //состояние списка задач
-    const [toDoList, setToDoList] = useState(tasks)
     //состояние поиска
     const [searchQuery, setSearchQuery] = useState('')
     //состояние флага у часов
     const [flag, setFlag] = useState(true)
     //создаю хук с объектом контекста
-    const {authorization, setAuthorization} = useContext(Context)
-    let newToDoList = toDoList
+    const {toDoList, setToDoList} = useContext(Context)
 
 
     //для поиска - передаю callback и массив зависимостей, полученный результат передаю в список постов
     const searchedPosts = useMemo(() => {
+        let newToDoList = toDoList
         return  newToDoList.filter(post => post.description.toLowerCase().includes(searchQuery.toLowerCase()))
     }, [searchQuery, toDoList])
 

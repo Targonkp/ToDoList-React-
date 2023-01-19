@@ -10,6 +10,14 @@ function MainForm() {
     //создаю хук с объектом контекста
     const {authorization, setAuthorization} = useContext(Context)
 
+    const reloadPage = () => {
+        setTimeout(
+            () => {
+                window.location.reload()
+            }, 500
+        )
+    }
+
     //получаю значение по ключу
     useEffect(() => {
         setLogin(localStorage.getItem('login'))
@@ -26,6 +34,7 @@ function MainForm() {
         event.preventDefault()
         if (login === 'Admin' && password === '123') {
             setAuthorization(true)
+            reloadPage()
         }
         else {
             alert('Вы ввели неправильный пароль, повторите снова!')

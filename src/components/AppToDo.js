@@ -19,6 +19,7 @@ function AppToDo({submitValue, logoutPage}) {
     //хук для редиректа
     const navigate = useNavigate()
 
+
     useEffect(
         () => {
             authorization ? navigate('/ToDoList-React-/build/main') : navigate('/ToDoList-React-/build/auth')
